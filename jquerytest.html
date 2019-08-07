@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>jquery dom handling</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+                var name="Yeonsu";
+                var favorite = ["Watermelon", "Orange", "Strawberry"];
+                
+                $("#greeting").text("hello " + name);
+                for (var i = favorite.length - 1; i >= 0; i--) {
+                    $("#favorite").append("<li><a href='#" + favorite[i] + "'>" + favorite[i] + "</a></li>");
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="greeting"></h1>
+        <h2>좋아하는 과일</h2>
+        <ul id="favorite"></ul>
+    </body>
+</html
